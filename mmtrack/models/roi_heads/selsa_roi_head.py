@@ -1,9 +1,9 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 from mmdet.core import bbox2result, bbox2roi
-from mmdet.models import HEADS, StandardRoIHead
+from mmdet.registry import MODELS, StandardRoIHead
 
 
-@HEADS.register_module()
+@MODELS.register_module()
 class SelsaRoIHead(StandardRoIHead):
     """selsa roi head."""
 

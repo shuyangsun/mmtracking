@@ -1,11 +1,11 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 from mmdet.core import bbox2roi
-from mmdet.models import HEADS
+from mmdet.registry import MODELS
 
 from .roi_track_head import RoITrackHead
 
 
-@HEADS.register_module()
+@MODELS.register_module()
 class QuasiDenseTrackHead(RoITrackHead):
     """The quasi-dense track head."""
 

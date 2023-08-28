@@ -6,13 +6,13 @@ from einops import rearrange
 from mmengine.model.weight_init import trunc_normal_
 from mmcv.ops.prroi_pool import PrRoIPool
 from mmcv.runner.base_module import BaseModule
-from mmdet.models import HEADS
+from mmdet.registry import MODELS
 from mmdet.models.builder import build_head, build_loss
 
 from mmtrack.models.track_heads.stark_head import ScoreHead as MLPScoreHead
 
 
-@HEADS.register_module()
+@MODELS.register_module()
 class MixFormerScoreDecoder(nn.Module):
     """Score Prediction Module (SPM) proposed in
     "MixFormer: End-to-End Tracking with Iterative
@@ -115,7 +115,7 @@ class MixFormerScoreDecoder(nn.Module):
         return out_scores
 
 
-@HEADS.register_module()
+@MODELS.register_module()
 class MixFormerHead(BaseModule):
     """MixFormer head module for bounding box regression and prediction of
     confidence of tracking bbox.

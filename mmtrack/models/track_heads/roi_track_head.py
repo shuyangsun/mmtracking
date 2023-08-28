@@ -3,10 +3,10 @@ from abc import ABCMeta
 
 from mmengine.model import BaseModule
 from mmdet.core import bbox2roi, build_assigner, build_sampler
-from mmdet.models import HEADS, build_head, build_roi_extractor
+from mmdet.registry import MODELS, build_head, build_roi_extractor
 
 
-@HEADS.register_module()
+@MODELS.register_module()
 class RoITrackHead(BaseModule, metaclass=ABCMeta):
     """The roi track head.
 

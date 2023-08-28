@@ -1,11 +1,11 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import torch.nn as nn
-from mmdet.models import HEADS, ConvFCBBoxHead
+from mmdet.registry import MODELS, ConvFCBBoxHead
 
 from mmtrack.models import build_aggregator
 
 
-@HEADS.register_module()
+@MODELS.register_module()
 class SelsaBBoxHead(ConvFCBBoxHead):
     """Selsa bbox head.
 

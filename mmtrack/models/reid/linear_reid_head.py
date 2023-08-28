@@ -2,16 +2,16 @@
 import warnings
 
 import torch.nn as nn
-from mmcls.models.builder import HEADS
 from mmcls.models.heads.base_head import BaseHead
 from mmcls.models.losses import Accuracy
 from mmcv.runner import auto_fp16, force_fp32
+from mmdet.registry import MODELS
 from mmdet.models.builder import build_loss
 
 from .fc_module import FcModule
 
 
-@HEADS.register_module()
+@MODELS.register_module()
 class LinearReIDHead(BaseHead):
     """Linear head for re-identification.
 

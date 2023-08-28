@@ -116,9 +116,9 @@ neck=dict(
 ```python
 from mmengine.model import BaseModule
 
-from mmdet.models import HEADS
+from mmdet.registry import MODELS
 
-@HEADS.register_module()
+@MODELS.register_module()
 class MyHead(BaseModule):
 
     def __init__(self, arg1, arg2, *args, **kwargs):

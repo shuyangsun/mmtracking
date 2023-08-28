@@ -6,14 +6,14 @@ import torch.nn.functional as F
 from mmcv.cnn.bricks import ConvModule
 from mmcv.cnn.bricks.transformer import build_positional_encoding
 from mmcv.runner.base_module import BaseModule
-from mmdet.models import HEADS
+from mmdet.registry import MODELS
 from mmdet.models.builder import build_head, build_loss
 from mmdet.models.utils import Transformer, build_transformer
 from mmdet.models.utils.builder import TRANSFORMER
 from torch import nn
 
 
-@HEADS.register_module()
+@MODELS.register_module()
 class CornerPredictorHead(BaseModule):
     """Corner Predictor head.
 
@@ -116,7 +116,7 @@ class CornerPredictorHead(BaseModule):
         return soft_argmax_x, soft_argmax_y
 
 
-@HEADS.register_module()
+@MODELS.register_module()
 class ScoreHead(nn.Module):
     """Predict the confidence score of target in current frame.
 
@@ -245,7 +245,7 @@ class StarkTransformer(Transformer):
         return out_dec, enc_mem
 
 
-@HEADS.register_module()
+@MODELS.register_module()
 class StarkHead(BaseModule):
     """STARK head module for bounding box regression and prediction of
     confidence score of tracking bbox.

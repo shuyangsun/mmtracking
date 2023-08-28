@@ -1,13 +1,13 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import torch
 import torch.nn as nn
-from mmdet.models import HEADS, build_loss
+from mmdet.registry import MODELS, build_loss
 
 from mmtrack.core import embed_similarity
 from .roi_embed_head import RoIEmbedHead
 
 
-@HEADS.register_module()
+@MODELS.register_module()
 class QuasiDenseEmbedHead(RoIEmbedHead):
     """The quasi-dense roi embed head.
 

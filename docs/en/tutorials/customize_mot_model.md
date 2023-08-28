@@ -182,9 +182,9 @@ Create a new file `mmtrack/models/track_heads/my_head.py`.
 ```python
 from mmengine.model import BaseModule
 
-from mmdet.models import HEADS
+from mmdet.registry import MODELS
 
-@HEADS.register_module()
+@MODELS.register_module()
 class MyHead(BaseModule):
 
     def __init__(self,
