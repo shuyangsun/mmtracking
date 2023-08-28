@@ -2,8 +2,7 @@
 import torch.nn as nn
 from mmcv.cnn import build_conv_layer, build_norm_layer
 from mmdet.models.backbones.resnet import Bottleneck, ResNet
-from mmdet.models.builder import BACKBONES
-
+from mmdet.registry import MODELS
 
 class SOTBottleneck(Bottleneck):
     expansion = 4
@@ -147,7 +146,7 @@ class SOTBottleneck(Bottleneck):
                 planes * self.expansion, self.after_conv3_plugins)
 
 
-@BACKBONES.register_module()
+@MODELS.register_module()
 class SOTResNet(ResNet):
     """ResNet backbone for SOT.
 

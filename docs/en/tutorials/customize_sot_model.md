@@ -19,10 +19,10 @@ Create a new file `mmtrack/models/backbones/mobilenet.py`.
 import torch.nn as nn
 from mmengine.model import BaseModule
 
-from mmdet.models.builder import BACKBONES
+from mmdet.registry import MODELS
 
 
-@BACKBONES.register_module()
+@MODELS.register_module()
 class MobileNet(BaseModule):
 
     def __init__(self, arg1, arg2, *args, **kwargs):
