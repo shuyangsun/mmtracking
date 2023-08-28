@@ -5,7 +5,7 @@ from collections import OrderedDict
 import mmcv
 import torch
 import torch.distributed as dist
-from mmcv.runner import BaseModule, auto_fp16
+from mmengine.model import BaseModule, auto_fp16
 
 from mmtrack.core import imshow_tracks, results2outs
 from mmtrack.utils import get_root_logger

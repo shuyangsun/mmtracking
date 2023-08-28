@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from einops import rearrange
-from mmcv.cnn.utils.weight_init import trunc_normal_
+from mmengine.model.weight_init import trunc_normal_
 from mmcv.ops.prroi_pool import PrRoIPool
 from mmcv.runner.base_module import BaseModule
 from mmdet.models import HEADS

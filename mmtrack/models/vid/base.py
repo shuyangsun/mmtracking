@@ -6,7 +6,7 @@ import mmcv
 import numpy as np
 import torch
 import torch.distributed as dist
-from mmcv.runner import BaseModule, auto_fp16
+from mmengine.model import BaseModule, auto_fp16
 
 from mmtrack.utils import get_root_logger
 

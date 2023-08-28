@@ -2,7 +2,7 @@
 import torch
 import torch.nn as nn
 from mmcv.cnn.bricks import ConvModule
-from mmcv.runner import BaseModule, auto_fp16, force_fp32
+from mmengine.model import BaseModule, auto_fp16, force_fp32
 from mmdet.core import build_assigner, build_bbox_coder, build_sampler
 from mmdet.core.anchor import build_prior_generator
 from mmdet.core.bbox.transforms import bbox_xyxy_to_cxcywh

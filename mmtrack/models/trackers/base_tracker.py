@@ -4,7 +4,7 @@ from abc import ABCMeta, abstractmethod
 import torch
 import torch.nn.functional as F
 from addict import Dict
-from mmcv.runner import BaseModule
+from mmengine.model import BaseModule
 
 from mmtrack.models import TRACKERS
 

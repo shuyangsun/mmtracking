@@ -10,8 +10,8 @@ from einops import rearrange
 from mmcv.cnn import build_norm_layer
 from mmcv.cnn.bricks.drop import DropPath
 from mmcv.cnn.bricks.transformer import FFN
-from mmcv.cnn.utils.weight_init import trunc_normal_
-from mmcv.runner import BaseModule
+from mmengine.model.weight_init import trunc_normal_
+from mmengine.model import BaseModule
 from mmdet.models.builder import BACKBONES
 
 from mmtrack.core.utils.misc import ntuple

@@ -4,7 +4,7 @@ from collections import defaultdict
 import torch
 import torch.nn as nn
 from mmcv.cnn import ConvModule
-from mmcv.runner import BaseModule, auto_fp16, force_fp32
+from mmengine.model import BaseModule, auto_fp16, force_fp32
 from mmdet.models import HEADS, build_loss
 from mmdet.models.losses import accuracy
 from torch.nn.modules.utils import _pair

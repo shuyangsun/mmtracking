@@ -7,9 +7,10 @@ import mmcv
 import numpy as np
 import torch
 from mmcv.ops import RoIPool
-from mmcv.parallel import collate, scatter
-from mmcv.runner import load_checkpoint
-from mmdet.datasets.pipelines import Compose
+# from mmcv.parallel import collate, scatter
+from mmengine.dataset import utils
+from mmengine.runner import load_checkpoint
+from mmcv.transforms import Compose
 
 from mmtrack.models import build_model
 
