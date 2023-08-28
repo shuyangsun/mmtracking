@@ -1,7 +1,8 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import numpy as np
 import torch
-from mmdet.core.anchor import ANCHOR_GENERATORS, AnchorGenerator
+from mmdet.models import ANCHOR_GENERATORS 
+from mmdet.models.task_modules.prior_generators.anchor_generator import AnchorGenerator
 
 
 @ANCHOR_GENERATORS.register_module()

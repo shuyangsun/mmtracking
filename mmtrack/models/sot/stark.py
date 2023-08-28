@@ -6,7 +6,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 from addict import Dict
-from mmdet.core.bbox.transforms import bbox_xyxy_to_cxcywh
+from mmdet.structures.bbox import bbox_xyxy_to_cxcywh
 from mmdet.models.builder import build_backbone, build_head, build_neck
 from torch.nn.modules.batchnorm import _BatchNorm
 from torch.nn.modules.conv import _ConvNd

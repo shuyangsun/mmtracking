@@ -1,6 +1,6 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import torch
-from mmdet.core.bbox.transforms import bbox_xyxy_to_cxcywh
+from mmdet.structures.bbox import bbox_xyxy_to_cxcywh
 from mmdet.models.builder import build_backbone, build_head
 from torchvision.transforms.functional import normalize
 
