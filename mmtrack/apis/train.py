@@ -4,8 +4,7 @@ import os
 import numpy as np
 import torch
 import torch.distributed as dist
-from mmcv.runner import (HOOKS, DistSamplerSeedHook, EpochBasedRunner,
-                         build_optimizer, get_dist_info)
+from mmengine.hooks import (HOOKS, DistSamplerSeedHook, EpochBasedRunner, build_optimizer, get_dist_info)
 from mmcv.utils import build_from_cfg
 from mmdet.datasets import build_dataset
 
