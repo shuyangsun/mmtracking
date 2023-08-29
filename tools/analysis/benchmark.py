@@ -3,7 +3,7 @@ import argparse
 import time
 
 import torch
-from mmcv import Config
+from mmengine.config import Config
 from mmcv.cnn import fuse_conv_bn
 from mmcv.parallel import MMDataParallel
 from mmcv.runner import load_checkpoint, wrap_fp16_model

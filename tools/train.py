@@ -9,8 +9,8 @@ import warnings
 import mmcv
 import torch
 import torch.distributed as dist
-from mmcv import Config, DictAction
-from mmcv.runner import get_dist_info, init_dist
+from mmengine.config import Config, DictAction
+from mmengine.dist import get_dist_info, init_dist
 from mmdet.apis import set_random_seed
 
 from mmtrack import __version__

@@ -6,8 +6,9 @@ from functools import partial
 import numpy as np
 import torch
 from mmcv.parallel import collate
-from mmcv.runner import get_dist_info
-from mmcv.utils import TORCH_VERSION, digit_version
+from mmengine.dist import get_dist_info
+from mmengine.utils.dl_utils import TORCH_VERSION
+from mmengine.utils.version_utils import digit_version
 from mmdet.datasets.samplers import (DistributedGroupSampler,
                                      DistributedSampler, GroupSampler)
 from torch.utils.data import DataLoader

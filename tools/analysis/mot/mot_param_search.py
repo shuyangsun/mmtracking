@@ -6,11 +6,11 @@ from itertools import product
 import mmcv
 import torch
 from dotty_dict import dotty
-from mmcv import Config, DictAction, get_logger, print_log
+from mmengine.config import Config, DictAction, get_logger, print_log
 from mmcv.cnn import fuse_conv_bn
-from mmcv.parallel import MMDataParallel, MMDistributedDataParallel
-from mmcv.runner import (get_dist_info, init_dist, load_checkpoint,
-                         wrap_fp16_model)
+from mmengine.model import MMDataParallel, MMDistributedDataParallel
+from mmengine.dist import get_dist_info, init_dist
+from mmcv.runner import (load_checkpoint, wrap_fp16_model)
 from mmdet.datasets import build_dataset
 
 from mmtrack.models import build_tracker

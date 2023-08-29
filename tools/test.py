@@ -6,10 +6,10 @@ import time
 
 import mmcv
 import torch
-from mmcv import Config, DictAction
+from mmengine.config import Config, DictAction
 from mmcv.cnn import fuse_conv_bn
-from mmcv.runner import (get_dist_info, init_dist, load_checkpoint,
-                         wrap_fp16_model)
+from mmengine.dist import get_dist_info, init_dist
+from mmcv.runner import (load_checkpoint, wrap_fp16_model)
 from mmdet.apis import set_random_seed
 
 from mmtrack.core import setup_multi_processes
